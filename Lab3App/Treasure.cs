@@ -7,7 +7,6 @@ namespace Lab3App.Properties
 	{
 		public int Score { get; set; }
 
-        // Constructor for Treasure that takes a description, a score, and a collection board
         public Treasure(string description, int score) : base(description)
         {
             Score = score;

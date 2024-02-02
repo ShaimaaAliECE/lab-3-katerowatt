@@ -7,29 +7,28 @@ namespace Lab3App.Properties
 	{
         static void Main(string[] args)
         {
-            // Create a collection board
+            //collection board
             CollectionBoard board = new CollectionBoard();
 
             List<Collectable> possibleCollectiable = new List<Collectable>();
-            // Three coins 
+            //3 coins 
             possibleCollectiable.Add(new Coin("Nickel", score: 20, value: 5));
             possibleCollectiable.Add(new Coin("Dime", score: 40, value: 10));
             possibleCollectiable.Add(new Coin("Toony", score: 50, value: 100));
 
-            // Five Diamonds with descriptions Diamond1, Diamond2, ... etc.
+            //5 Diamonds with descriptions Diamond1, Diamond2, ... etc.
             for (int i = 1; i <= 5; i++)
             {
                 possibleCollectiable.Add(new Diamond("Diamond" + i, score: 100));
             }
 
-            // One Axe
+            //1 Axe
             possibleCollectiable.Add(new Axe("OnlyAxe"));
 
-            // One MagicWand
+            //1 MagicWand
             possibleCollectiable.Add(new MagicWand("OnlyMagicWand"));
 
-            // Associate the CollectionBoard object to all the possible Collectiables
-            // using a foreach loop
+            // Associate the CollectionBoard object to all the possible Collectiable using a foreach loop
             foreach (Collectable collectable in possibleCollectiable)
             {
                 collectable.Board = board;
